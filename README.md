@@ -14,9 +14,9 @@ Ca devrait être bon.
 
 Bonne pratique : 
 --
-Quand vous éditez quoi que ce soit, **FAITE UNE BRANCHE PLS** comme ca on garde un repo clean et on se marche pas dessus ;).
+Quand vous éditez quoi que ce soit, **FAITE UNE BRANCHE PLS** comme ça on garde un repo clean et on se marche pas dessus ;).
 
 
 PS
 --
-Il se peut que vous devier configurer votre clef SSH, regarder `Settings > SSH` sur Github
+Il se peut que vous deviez configurer votre clef SSH, regardez `Settings > SSH` sur Github
