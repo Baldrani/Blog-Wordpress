@@ -4,8 +4,8 @@ Comment importer le projet
 * Partir de son wordpress dans son dossier root sur le serveur
 **Dans une fenêtre bash**
 * `rm -rf wp-content`
-* `git clone git@github.com:Baldrani/Blog-Wordpress.git``
-* `cd Blog-Wordpress*
+* `git clone git@github.com:Baldrani/Blog-Wordpress.git`
+* `cd Blog-Wordpress`
 * `mv * ../`
 * `cd ..`
 * `rm -rf Blog-Wordpress`
