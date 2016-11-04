@@ -1,0 +1,15 @@
+/*
+Theme Name: Mon Theme
+Author: Sylvain CABIATI
+Authot URI: http://www.google.com
+Description: Ceci est mon theme
+Version: 0.0.1
+Template: twentysixteen
+
+*/
+
+@import url("../twentysixteen/style.css");
+
+body{
+  color:red;
+}
