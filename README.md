@@ -16,7 +16,29 @@ Bonne pratique :
 --
 Quand vous éditez quoi que ce soit, **FAITE UNE BRANCHE PLS** comme ça on garde un repo clean et on se marche pas dessus ;).
 
-
 PS
 --
 Il se peut que vous deviez configurer votre clef SSH, regardez `Settings > SSH` sur Github
+
+
+**RÉPARTITION DES TÂCHES**
+--
+
+Douae : 
+
+Guillaume : 
+
+Maël :
+* Plugin France
+
+Sylvain : 
+
+Reste à attribuer/faire : 
+* Wireframe : Catégorie + Article
+* Chat du jour
+* Slider chat à adopter en france (dernière annonce)
+* Script génération Json chat au hasard + google image + nom aléatoire.
+* Widget Twitter chat à adopter
+* Widget Top 5 chat
+* Possibilité de liker les chats (1 like max par personne ofc)
+* Widget Dernier chat adopté
