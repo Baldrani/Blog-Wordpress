@@ -34,7 +34,9 @@ Maël :
 Sylvain : 
 
 Reste à attribuer/faire : 
-* Wireframe : Catégorie + Article
+* Css global (SASS)
+* SEO ?
+* Architecture global du site
 * Chat du jour
 * Slider chat à adopter en france (dernière annonce)
 * Script génération Json chat au hasard + google image + nom aléatoire.
