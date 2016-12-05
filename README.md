@@ -48,6 +48,8 @@ Reste à attribuer/faire :
 **QUESTION : **
 --
 
-Est ce qu'on met en place des migrations  pour les databases histoire qu'on est tous les mêmes.
-Autres question : pour le plugin de carte j'ai besoin d'une table **cat** et dedans y'a une donnée c'est **location** qui correspond à la région d'où il provient.
-Vous voulez créer une table à part genre **department**  et du coup un join dans **cat** avec **location_id** ? C'est uniquement si département a une utilité ailleurs. C'est ça ma question en gros est ce qu'un vendeur a un département où on s'en fou et on se contente du département du chat puisqu'a priori c'est le même. **OU** est-ce que vous voyez une autre utilité/nécessité de faire une table **department**
+Est ce qu'on met en place des migrations  pour les databases histoire qu'on ait tous les mêmes.
+
+Autre question : pour le plugin de carte j'ai besoin d'une table **cat** et dedans y'a une donnée c'est **location** qui correspond à la région d'où il provient.
+
+Vous voulez créer une table à part genre **department**  et du coup un join dans **cat** avec **location_id** ? C'est uniquement si département a une utilité ailleurs. En gros est ce qu'un vendeur a un département ou on s'en fou et on se contente du département du chat puisqu'a priori c'est le même. **OU** est-ce que vous voyez une autre utilité/nécessité de faire une table **department** ?
