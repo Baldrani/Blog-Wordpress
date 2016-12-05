@@ -25,7 +25,7 @@ Il se peut que vous deviez configurer votre clef SSH, regardez `Settings > SSH` 
 --
 
 Douae : 
-
+* Slider chat à adopter en france (dernière annonce)
 Guillaume : 
 
 Maël :
@@ -38,7 +38,6 @@ Reste à attribuer/faire :
 * SEO ?
 * Architecture global du site
 * Chat du jour
-* Slider chat à adopter en france (dernière annonce)
 * Script génération Json chat au hasard + google image + nom aléatoire.
 * Widget Twitter chat à adopter
 * Widget Top 5 chat
