@@ -26,6 +26,7 @@ Il se peut que vous deviez configurer votre clef SSH, regardez `Settings > SSH` 
 
 Douae : 
 * Slider chat à adopter en france (dernière annonce)
+
 Guillaume : 
 
 Maël :
