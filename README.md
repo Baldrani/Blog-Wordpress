@@ -28,6 +28,8 @@ Douae :
 * Slider chat à adopter en france (dernière annonce)
 
 Guillaume : 
+* Chat du jour
+* Widget Top 5 chat
 
 Maël :
 * Plugin France
@@ -38,10 +40,8 @@ Reste à attribuer/faire :
 * Css global (SASS)
 * SEO ?
 * Architecture global du site
-* Chat du jour
 * Script génération Json chat au hasard + google image + nom aléatoire.
 * Widget Twitter chat à adopter
-* Widget Top 5 chat
 * Possibilité de liker les chats (1 like max par personne ofc)
 * Widget Dernier chat adopté
 
