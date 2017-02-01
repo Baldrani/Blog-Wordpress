@@ -35,14 +35,14 @@ Maël :
 * Plugin France
 
 Sylvain : 
+* Widget Twitter chat à adopter
+* Possibilité de liker les chats (1 like max par personne ofc)
 
 Reste à attribuer/faire : 
 * Css global (SASS)
 * SEO ?
 * Architecture global du site
 * Script génération Json chat au hasard + google image + nom aléatoire.
-* Widget Twitter chat à adopter
-* Possibilité de liker les chats (1 like max par personne ofc)
 * Widget Dernier chat adopté
 
 **QUESTION : **
