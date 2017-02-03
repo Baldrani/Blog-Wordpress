@@ -25,4 +25,8 @@
 
     /*En-tete */
 add_theme_support('custom-header' );
+
+if (function_exists('add_theme_support')) {
+    add_theme_support('post-thumbnails');
+}
  ?>
