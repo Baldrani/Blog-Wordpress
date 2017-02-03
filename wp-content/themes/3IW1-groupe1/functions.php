@@ -23,6 +23,20 @@
     }
     add_action('widgets_init', 'my_sidebars');
 
+    function zero_add_sidebar()
+    {
+        register_sidebar(array(
+            'id' => 'my_custom_zone',
+            'name' => 'Zone supérieure',
+            'description' => 'Apparait en haut du site',
+            'before_widget' => '<aside>',
+            'after_widget' => '</aside>',
+            'before_title' => '<h1>',
+            'after_title' => '</h1>'
+        ));
+    }
+    add_action('widgets_init','zero_add_sidebar');
+
     /*En-tete */
 add_theme_support('custom-header' );
  ?>

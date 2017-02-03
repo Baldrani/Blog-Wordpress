@@ -1,7 +1,6 @@
-        <?php
-        wp_nav_menu(array(
-            'theme_location' => 'footer_menu'
-        ));
-        wp_footer(); ?>
+        <?php wp_footer(); ?>
+        <footer>
+            © Blog Wordpress - 2016
+        </footer>
     </body>
 </html>
