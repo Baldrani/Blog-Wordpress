@@ -9,7 +9,7 @@ if (have_posts()){
   }
 }
 else {
-  echo 'Pas d\'article test';
+  echo 'Pas d\'article';
 }
 
 dynamic_sidebar('sidebar-1');
