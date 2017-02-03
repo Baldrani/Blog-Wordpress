@@ -24,5 +24,7 @@
     add_action('widgets_init', 'my_sidebars');
 
     /*En-tete */
-add_theme_support('custom-header' );
+add_theme_support('custom-header');
+
+
  ?>

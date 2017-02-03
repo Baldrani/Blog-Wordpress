@@ -12,6 +12,8 @@ else {
   echo 'Pas d\'article';
 }
 
+
+
 dynamic_sidebar('sidebar-1');
 
 get_footer();

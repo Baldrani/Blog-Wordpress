@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title><?php  wp_title(); echo ' | '; bloginfo('name'); ?></title>
-  <?php wp_head(); 
+  <?php wp_head();
   ?>
 </head>
 <body>
-  <?php 
+  <?php
   if(get_header_image()){
-    echo '<img src ="'.get_header_image().'" alt="image header" title="superbe image">';
+    echo '<a href="'.get_home_url().'"><img src ="'.get_header_image().'" alt="image header" title=""></a>';
   }else{
     echo "pas d'image d'en-tete";
   }
