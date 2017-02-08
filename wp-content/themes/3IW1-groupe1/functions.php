@@ -24,5 +24,10 @@
     add_action('widgets_init', 'my_sidebars');
 
 
+
+    /* jqvmqp */
+    // add_action('widgets_init', function(){register_widget('carte-france');});
+
+
 /*En-tete */
 add_theme_support('custom-header' );

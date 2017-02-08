@@ -14,7 +14,11 @@ else {
 ?>
 <div class="container">
     <div class="row">
-        <div class="col-xs-12" style="background:red"><?php dynamic_sidebar('my_custom_zone');?></div>
+        <div class="col-xs-12 col-sm-8" style="background:red"><?php dynamic_sidebar('my_custom_zone');?></div>
+        <div class="col-xs-12 col-sm-4">
+        <?php dynamic_sidebar('sidebar-1'); ?>
+        <?php dynamic_sidebar('jqvmap'); ?>
+        </div>
     </div>
 </div>
 <?php
@@ -30,4 +34,3 @@ while ($loop->have_posts()){
  ?>
 
     <?php get_footer(); ?>
->>>>>>> Stashed changes
