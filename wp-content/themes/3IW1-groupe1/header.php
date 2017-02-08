@@ -13,7 +13,5 @@
   }else{
     echo "pas d'image d'en-tete";
   }
-    wp_nav_menu(array(
-               'theme_location' =>'main_menu'
-      ) );
+  wp_nav_menu(array('theme_location' => 'main_menu') );
   ?>

@@ -23,6 +23,6 @@
     }
     add_action('widgets_init', 'my_sidebars');
 
-    /*En-tete */
+
+/*En-tete */
 add_theme_support('custom-header' );
- ?>

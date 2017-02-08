@@ -9,10 +9,25 @@ if (have_posts()){
   }
 }
 else {
-  echo 'Pas d\'article test';
+  echo 'Pas d\'article yolo';
+}
+?>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12" style="background:red"><?php dynamic_sidebar('my_custom_zone');?></div>
+    </div>
+</div>
+<?php
+
+//La voucle qui récupère les évenements
+$loop = new WP_Query(array('post_type'=>'events'));
+while ($loop->have_posts()){
+    $loop->the_post();
+    the_title();
+    the_content();
 }
 
-dynamic_sidebar('sidebar-1');
-
-get_footer();
  ?>
+
+    <?php get_footer(); ?>
+>>>>>>> Stashed changes
