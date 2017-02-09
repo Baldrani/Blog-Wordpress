@@ -16,11 +16,12 @@ class ChatDuJour_Plugin {
         include_once plugin_dir_path(__FILE__)."/page_title.php";
         new ChatDuJour_Page_Title();
 
-        include_once plugin_dir_path(__FILE__)."/newsletter.php";
-        new Zero_Newsletter();
+        include_once plugin_dir_path(__FILE__)."/ChatDuJour_Sql.php";
+        new ChatDuJour_Sql();
 
-        register_activation_hook(__FILE__, array("Zero_Newsletter", "install"));
-        register_uninstall_hook(__FILE__, array("Zero_Newsletter", "uninstall"));
+
+        //register_activation_hook(__FILE__, array("Zero_Newsletter", "install"));
+        //register_uninstall_hook(__FILE__, array("Zero_Newsletter", "uninstall"));
     }
 
 }
