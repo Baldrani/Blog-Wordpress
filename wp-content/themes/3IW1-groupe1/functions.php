@@ -23,6 +23,15 @@
     }
     add_action('widgets_init', 'my_sidebars');
 
+    /* Jqvmap */
+    function jqvmap(){
+        register_sidebar(array(
+            'name'        => 'Barre Jquery Vector Map',
+            'id'          => 'jqvmap',
+            'description' => 'Affiche la carte de france avec la disponaibilité des chats'
+        ));
+    }
+    add_action('widgets_init', 'jqvmap');
 
 
     /* jqvmqp */

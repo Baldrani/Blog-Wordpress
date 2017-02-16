@@ -1,6 +1,6 @@
 <?php
 get_header();
-
+/*
 if (have_posts()){
   while (have_posts()) {
     the_post();?>
@@ -10,15 +10,18 @@ if (have_posts()){
 }
 else {
   echo 'Pas d\'article yolo';
-}
+}*/
 ?>
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-8" style="background:red"><?php dynamic_sidebar('my_custom_zone');?></div>
+        <div class="col-xs-12 col-sm-8">
+            <?php if ( is_active_sidebar('jqvmap') ) dynamic_sidebar('jqvmap'); ?>
+        </div>
         <div class="col-xs-12 col-sm-4">
         <?php dynamic_sidebar('sidebar-1'); ?>
-        <?php dynamic_sidebar('jqvmap'); ?>
         </div>
+    </div>
+    <div class="row">
     </div>
 </div>
 <?php

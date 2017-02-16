@@ -1,3 +1,24 @@
+/* MAël Touch */
+function touch_detect() {
+  return 'ontouchstart' in window || 'onmsgesturechange' in window || navigator.msMaxTouchPoints > 0;
+}
+
+jQuery(document).ready(function () {
+  jQuery('#vmap').vectorMap({
+    map: 'france_fr',
+    enableZoom: true,
+    showTooltip: true,
+    onRegionClick: function (element, code, region) {
+      if (!touch_detect()) {
+        window.location.href = "http://stackoverflow.com/";
+        // we're not on a mobile device, handle the click
+        // var message = 'You clicked "' + region + '" which has the code: ' + code.toUpperCase() + nbcat;
+        // alert(message);
+      }
+    }
+  });
+});
+
 /*!
  * JQVMap: jQuery Vector Map Library
  * @author JQVMap <me@peterschmalfeldt.com>
