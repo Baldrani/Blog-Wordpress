@@ -23,7 +23,22 @@
     }
     add_action('widgets_init', 'my_sidebars');
 
-    /*En-tete */
+    /* Jqvmap */
+    function jqvmap(){
+        register_sidebar(array(
+            'name'        => 'Barre Jquery Vector Map',
+            'id'          => 'jqvmap',
+            'description' => 'Affiche la carte de france avec la disponaibilité des chats'
+        ));
+    }
+    add_action('widgets_init', 'jqvmap');
+
+
+    /* jqvmqp */
+    // add_action('widgets_init', function(){register_widget('carte-france');});
+
+
+/*En-tete */
 add_theme_support('custom-header' );
 
 if (function_exists('add_theme_support')) {
