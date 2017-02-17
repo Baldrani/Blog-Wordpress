@@ -1,5 +1,6 @@
 <?php
-    function theme_styles() {
+    function theme_styles()
+    {
         wp_enqueue_style('bootstrap-css', get_template_directory_uri().'/css/bootstrap.min.css');
         wp_enqueue_style('main_style', get_stylesheet_uri());
         wp_enqueue_script('bootstrap-js', get_template_directory_uri().'/js/bootstrap.min.js');
@@ -7,14 +8,16 @@
     add_action('wp_enqueue_scripts', 'theme_styles');
 
     /* Menus */
-    function my_menus() {
+    function my_menus()
+    {
         register_nav_menu('main_menu', 'Menu principal');
         register_nav_menu('footer_menu', 'Menu du pied de page');
     }
     add_action('init', 'my_menus');
 
     /* Zone de widgets */
-    function my_sidebars() {
+    function my_sidebars()
+    {
         register_sidebar(array(
             'name'          => 'Barre latérale',
             'id'            => 'sidebar-1',
@@ -24,7 +27,8 @@
     add_action('widgets_init', 'my_sidebars');
 
     /* Jqvmap */
-    function jqvmap(){
+    function jqvmap()
+    {
         register_sidebar(array(
             'name'        => 'Barre Jquery Vector Map',
             'id'          => 'jqvmap',
@@ -38,10 +42,9 @@
     // add_action('widgets_init', function(){register_widget('carte-france');});
 
 
-/*En-tete */
-add_theme_support('custom-header' );
+    /*En-tete */
+    add_theme_support('custom-header');
 
-if (function_exists('add_theme_support')) {
-    add_theme_support('post-thumbnails');
-}
- ?>
+    if (function_exists('add_theme_support')) {
+        add_theme_support('post-thumbnails');
+    }
