@@ -35,11 +35,16 @@ class ChatDuJour_Widget extends WP_Widget
             }
         }
 
+        $yesterday = $wpdb->get_var("SELECT DATE_ADD(CURDATE(), INTERVAL -1 DAY)");
+        $yesterdayCatId = $wpdb->get_var("SELECT id_post FROM {$wpdb->prefix}chat_du_jour WHERE date_jour = \"".$yesterday."\"");
+
         if ($addCat) {
             $nbOfCats = $wpdb->get_var("SELECT COUNT(ID) FROM {$wpdb->prefix}posts WHERE post_status = \"publish\" AND ping_status = \"open\" AND post_type = \"post\"");
             $catsId = $wpdb->get_results("SELECT ID FROM {$wpdb->prefix}posts WHERE post_status = \"publish\" AND ping_status = \"open\" AND post_type = \"post\"");
-            $randomCat = mt_rand(0, ($nbOfCats - 1));
-            $theCatId = $catsId[$randomCat]->ID;
+            do {
+                $randomCat = mt_rand(0, ($nbOfCats - 1));
+                $theCatId = $catsId[$randomCat]->ID;
+            } while ($yesterdayCatId == $theCatId);
             $wpdb->insert("{$wpdb->prefix}chat_du_jour", array("id_post" => $theCatId, "date_jour" => $curDate));
         }
 
