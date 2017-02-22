@@ -47,20 +47,20 @@ div[id*="sidebar"] li[id*="top5chats"] p:nth-child(4) i {
 /* Barre widget jqvmap */
 
 
-    .jqvmap-zoomin, .jqvmap-zoomout {
-        position: absolute !important;
-        left: 10px !important;
-        -webkit-border-radius: 3px !important;
-        -moz-border-radius: 3px !important;
-        border-radius: 3px !important;
-        background: #000 !important;
-        padding: 3px !important;
-        color: #fff !important;
-        width: 13px !important;
-        height: 13px !important;
-        cursor: pointer !important;
-        line-height: 7px !important;
-    }
+.jqvmap-zoomin, .jqvmap-zoomout {
+    position: absolute !important;
+    left: 10px !important;
+    -webkit-border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    border-radius: 3px !important;
+    background: #000 !important;
+    padding: 3px !important;
+    color: #fff !important;
+    width: 13px !important;
+    height: 13px !important;
+    cursor: pointer !important;
+    line-height: 7px !important;
+}
 
 
 #slideshow {
