@@ -7,7 +7,42 @@ Version: 0.0.1
 */
 
 body{
-  color:green;
+  color: #333;
+}
+
+/* Sidebar widgets */
+
+#sidebar-1 li {
+    list-style-type: none;
+}
+
+#sidebar-1 li p {
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+#sidebar-1 li[id*="top5chats"] p i {
+    color: #fff;
+}
+
+#sidebar-1 li[id*="top5chats"] p:nth-child(2) i {
+    color: rgba(243, 156, 18, 1);
+}
+
+#sidebar-1 li[id*="top5chats"] p:nth-child(3) i {
+    color: rgba(191, 191, 191, 1);
+}
+
+#sidebar-1 li[id*="top5chats"] p:nth-child(4) i {
+    color: rgba(150, 40, 27, 1);
+}
+
+
+/* Barre widget jqvmap */
+
+#jqvmap {
+
 }
 
 #slideshow {

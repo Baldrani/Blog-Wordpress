@@ -11,6 +11,7 @@ class Cat_Plugins
         add_action('widgets_init', function(){register_widget('Jqvmap_France_Widget');});
         add_action('widgets_init', function(){register_widget('Top5Chats_Widget');});
         add_action('widgets_init', function(){register_widget('ChatDuJour_Widget');});
+        register_activation_hook(__FILE__, array("ChatDuJour_Widget", "install"));
     }
 
 }

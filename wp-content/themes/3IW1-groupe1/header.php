@@ -8,7 +8,8 @@
 <body>
   <?php
   if(get_header_image()){
-    echo '<a href="'.get_home_url().'"><img src ="'.get_header_image().'" alt="image header" title=""></a>';
+    $url = strstr(get_header_image(), "wp");
+    echo '<a href="'.get_home_url().'"><img src="'.get_home_url()."/".$url.'" alt="image header" title=""></a>';
   }else{
     echo "pas d'image d'en-tete";
   }
