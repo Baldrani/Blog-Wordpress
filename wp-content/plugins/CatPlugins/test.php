@@ -1,14 +1,4 @@
 <?php
-// Good to use !!
-$user = "root";
-$pass = "root";
-try {
-    $dbh = new PDO('mysql:host=localhost;dbname=test', $user, $pass);
-    // $dbh = null;
-} catch (PDOException $e) {
-    print "Erreur !: " . $e->getMessage() . "<br/>";
-    die();
-}
 
 $str = file_get_contents('dist/maps/jquery.vmap.france.js');
 $str = substr($str, 81, strlen($str));
@@ -18,15 +8,13 @@ $json = json_decode($str,true);
 
 // echo '<pre>' . print_r($json, true) . '</pre>';
 foreach ($json as $key => $value) {
-    $sth = $dbh->prepare('SELECT count(*) from cat where location = \''.$key.'\'');
+    $sth = $dbh->prepare('SELECT count(*) FROM `wp_postmeta` WHERE meta_key = `_departement` AND meta_value = \''.$key.'\');
     $sth->execute();
     $result = $sth->fetch(PDO::FETCH_ASSOC);
     $json[$key]['nb_cat'] = $result["count(*)"];
-    // echo($key . ' => ' . $value[nb_cat]);
-    // echo('<br />');
 }
 
-echo '<pre>' . print_r($json, true) . '</pre>';
+// echo '<pre>' . print_r($json, true) . '</pre>';
 
 // echo json_encode($json);
 
