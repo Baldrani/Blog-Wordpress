@@ -8,13 +8,7 @@ jQuery(document).ready(function () {
     map: 'france_fr',
     enableZoom: true,
     showTooltip: true,
-    onRegionClick: function (element, code, region) {
-      if (!touch_detect()) {
-        window.location.href = "http://stackoverflow.com/";
-        // we're not on a mobile device, handle the click
-        // var message = 'You clicked "' + region + '" which has the code: ' + code.toUpperCase() + nbcat;
-        // alert(message);
-      }
+    onRegionSelect: function (element, code, region) {
     }
   });
 });
