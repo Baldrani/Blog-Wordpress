@@ -45,14 +45,12 @@ class LikeElement_Widget extends WP_Widget
   public function likeAction($vote,$currentPostId){
     global $wpdb;
     $vote = $vote + 1;
-    echo "+1".$vote;
     $wpdb->update("{$wpdb->prefix}like_element",array("vote_value" => $vote),array("id_post" => $currentPostId));
   }
 
   public function dislikeAction($vote,$currentPostId){
     global $wpdb;
     $vote = $vote - 1;
-    echo "-1".$vote;
     $wpdb->update("{$wpdb->prefix}like_element",array("vote_value" => $vote),array("id_post" => $currentPostId));
   }
 }
