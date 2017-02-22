@@ -47,10 +47,10 @@ else {
             ?>
         </div>
 
-        <div class="col-xs-12 col-sm-8">
+        <div class="col-xs-12 col-sm-8" id="jqvmap">
             <?php if ( is_active_sidebar('jqvmap') ) dynamic_sidebar('jqvmap'); ?>
         </div>
-        <div class="col-xs-12 col-sm-4">
+        <div class="col-xs-12 col-sm-4" id="sidebar-1">
         <?php dynamic_sidebar('sidebar-1'); ?>
         </div>
     </div>

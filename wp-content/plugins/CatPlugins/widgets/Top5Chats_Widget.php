@@ -39,7 +39,7 @@ class Top5Chats_Widget extends WP_Widget
             //$chatInfo = $wpdb->get_results("select * from {$wpdb->prefix}posts where id = ".$chat->id);
             $chatInfo = get_post($chat->id);
             $chatUrl = get_permalink($chatInfo);
-            echo "<p><a href=\"".$chatUrl."\">".$chatInfo->post_title."</a></p>";
+            echo "<p><i class=\"fa fa-trophy\" aria-hidden=\"true\"></i> <a href=\"".$chatUrl."\">".$chatInfo->post_title."</a></p>";
         }
 
         echo $args['after_widget'];
