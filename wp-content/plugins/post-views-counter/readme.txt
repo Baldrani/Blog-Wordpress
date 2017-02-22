@@ -4,7 +4,7 @@ Donate link: http://www.dfactory.eu/
 Tags: counter, hits, posts, postviews, post views, views, count, statistics, stats, analytics, pageviews, tracking
 Requires at least: 4.0
 Tested up to: 4.7.2
-Stable tag: 1.2.6
+Stable tag: 1.2.7
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 
@@ -58,6 +58,11 @@ No questions yet.
 2. screenshot-2.png
 
 == Changelog ==
+
+= 1.2.7 =
+* Fix: Chart data not updating for object cached installs due to missing expire parameter
+* Fix: Bug preventing hiding the counter based on user role.
+* Fix: Undefined notice in the admin dashboard request
 
 = 1.2.6 =
 * Fix: Hardcoded post_views database table prefix
@@ -151,5 +156,7 @@ Initial release
 
 == Upgrade Notice ==
 
-= 1.2.6 =
-* Fix: Hardcoded post_views database table prefix
+= 1.2.7 =
+* Fix: Chart data not updating for object cached installs due to missing expire parameter
+* Fix: Bug preventing hiding the counter based on user role.
+* Fix: Undefined notice in admin dashboard request

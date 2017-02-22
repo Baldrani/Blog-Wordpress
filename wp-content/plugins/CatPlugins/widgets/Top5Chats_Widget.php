@@ -3,7 +3,14 @@ class Top5Chats_Widget extends WP_Widget
 {
     public function __construct()
     {
+        register_activation_hook(__FILE__, array("ChatDuJour_Sql", "install"));
         parent::__construct('top5chats_sql', 'Top 5 Chats', array('description' => 'Les 5 chats les plus populaires'));
+    }
+
+    public static function install()
+    {
+        global $wpdb;
+        $wpdb->query("CREATE TABLE IF NOT EXISTS {$wpdb->prefix}chat_du_jour (id INT AUTO_INCREMENT PRIMARY KEY, id_post INT, date_jour DATE NOT NULL DEFAULT CURDATE());");
     }
 
     public function form($instance)

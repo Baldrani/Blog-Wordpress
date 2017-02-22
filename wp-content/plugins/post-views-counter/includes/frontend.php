@@ -116,7 +116,7 @@ class Post_Views_Counter_Frontend {
 			if ( in_array( 'users', $groups, true ) )
 				$display = false;
 			// exclude specific roles?
-			elseif ( in_array( 'roles', $groups, true ) && Post_Views_Counter()->counter->is_user_role_excluded( Post_Views_Counter()->options['display']['restrict_display']['roles'] ) )
+			elseif ( in_array( 'roles', $groups, true ) && Post_Views_Counter()->counter->is_user_role_excluded( get_current_user_id(), Post_Views_Counter()->options['display']['restrict_display']['roles'] ) )
 				$display = false;
 		}
 		// exclude guests?

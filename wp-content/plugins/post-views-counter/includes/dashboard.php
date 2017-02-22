@@ -81,7 +81,7 @@ class Post_Views_Counter_Dashboard {
 		);
 
 		// set range
-		$this_month = 'this_year';
+		$range = 'this_month';
 
 		// $now = getdate( current_time( 'timestamp', get_option( 'gmt_offset' ) ) );
 		$now = getdate( current_time( 'timestamp', get_option( 'gmt_offset' ) ) - 2592000 );
@@ -172,6 +172,10 @@ class Post_Views_Counter_Dashboard {
 					foreach ( $post_views as $id => $views ) {
 						// generate chart data for specific post types
 						$data['data']['datasets'][$post_type_id]['data'][] = $views;
+
+						if ( ! array_key_exists( $id, $sum ) )
+							$sum[$id] = 0;
+
 						$sum[$id] += $views;
 					}
 				}
@@ -244,6 +248,10 @@ class Post_Views_Counter_Dashboard {
 					foreach ( $post_views as $id => $views ) {
 						// generate chart data for specific post types
 						$data['data']['datasets'][$post_type_id]['data'][] = $views;
+
+						if ( ! array_key_exists( $id, $sum ) )
+							$sum[$id] = 0;
+
 						$sum[$id] += $views;
 					}
 				}

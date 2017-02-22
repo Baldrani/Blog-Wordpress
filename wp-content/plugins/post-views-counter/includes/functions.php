@@ -42,8 +42,11 @@ if ( ! function_exists( 'pvc_get_post_views' ) ) {
 		// cached data not found?
 		if ( $post_views === false ) {
 			$post_views = (int) $wpdb->get_var( $query );
+			
+			// set the cache expiration, 5 minutes by default
+			$expire = absint( apply_filters( 'pvc_object_cache_expire', 5 * 60 ) );
 
-			wp_cache_add( md5( $query ), $post_views, 'pvc-get_post_views' );
+			wp_cache_add( md5( $query ), $post_views, 'pvc-get_post_views', $expire );
 		}
 
 		return apply_filters( 'pvc_get_post_views', $post_views, $post_id );
@@ -219,8 +222,10 @@ if ( ! function_exists( 'pvc_get_views' ) ) {
 				$post_views = (int) $wpdb->get_var( $query );
 			}
 
-			// cache results
-			wp_cache_add( md5( $query ), $post_views, 'pvc-get_views' );
+			// set the cache expiration, 5 minutes by default
+			$expire = absint( apply_filters( 'pvc_object_cache_expire', 5 * 60 ) );
+			
+			wp_cache_add( md5( $query ), $post_views, 'pvc-get_views', $expire );
 		}
 
 		return apply_filters( 'pvc_get_views', $post_views );
