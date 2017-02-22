@@ -52,7 +52,8 @@ class ChatDuJour_Widget extends WP_Widget
         $theCat = get_post($dayCatId);
         $url = get_permalink($theCat);
 
-        echo "<p><a href=\"".$url."\">".$theCat->post_title."</a></p>";
+        echo "<p><a href=\"".$url."\">".get_the_post_thumbnail($theCat->ID, 'thumbnail')."<br>";
+        echo $theCat->post_title."</a></p>";
         echo $args['after_widget'];
     }
 }
