@@ -13,7 +13,7 @@ class Jqvmap_France_Widget extends WP_Widget
 
         /* ~~~~ Display map ~~~ */
         //Js de base
-        wp_register_script('jqvmap-js',plugins_url('jqvmap_france/jquery.vmap.js', __FILE__), array ('jquery'));
+        wp_register_script('jqvmap-js',plugins_url('jqvmap_france/jquery.vmap.js', __FILE__));
         wp_enqueue_script( 'jqvmap-js' );
         //Fichier json de la map
         wp_register_script('jqvmap-france',plugins_url('jqvmap_france/jquery.vmap.testfrance.js', __FILE__));

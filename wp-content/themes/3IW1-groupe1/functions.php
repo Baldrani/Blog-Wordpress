@@ -3,7 +3,7 @@
     {
         wp_enqueue_style('bootstrap-css', get_template_directory_uri().'/css/bootstrap.min.css');
         wp_enqueue_style('main_style', get_stylesheet_uri());
-        wp_enqueue_script('bootstrap-js', get_template_directory_uri().'/js/bootstrap.min.js');
+        wp_enqueue_script('bootstrap-js', get_template_directory_uri().'/js/bootstrap.min.js', array ('jquery'));
     }
     add_action('wp_enqueue_scripts', 'theme_styles');
 
