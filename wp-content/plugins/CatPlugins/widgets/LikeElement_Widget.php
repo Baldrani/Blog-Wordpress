@@ -37,6 +37,8 @@ class LikeElement_Widget extends WP_Widget
   		// since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
   		jQuery.post('/wp-admin/admin-ajax.php', data, function(response) {
         document.getElementById('nbvotes').innerHTML = response;
+        document.getElementsByClassName('fa-thumbs-up')[0].style.color = '#178b17';
+        document.getElementsByClassName('fa-thumbs-down')[0].style.color = 'inherit';
   		});
   	});
 
@@ -50,12 +52,14 @@ class LikeElement_Widget extends WP_Widget
       // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
       jQuery.post('/wp-admin/admin-ajax.php', data, function(response) {
         document.getElementById('nbvotes').innerHTML = response;
+        document.getElementsByClassName('fa-thumbs-down')[0].style.color = 'red';
+        document.getElementsByClassName('fa-thumbs-up')[0].style.color = 'inherit';
       });
     });
     </script>";
 
-    echo "<div>
-    votes : <span id='nbvotes'>".$vote."</span><br>
+    echo "<div style=\"font-weight: 900;\">
+    Votes : <span id='nbvotes'>".$vote."</span><br>
     </div></div>";
   }
     echo $args['after_widget'];
