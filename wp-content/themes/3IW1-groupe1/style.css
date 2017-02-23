@@ -82,6 +82,20 @@ div[id*="sidebar"] li[id*="recent-post"] ul {
     padding-left: 0;
 }
 
+div[id*="sidebar"] .thumbsup {
+    text-align: center;
+    cursor: pointer;
+}
+
+div[id*="sidebar"] .thumbsup i.fa {
+    margin: 0 15px;
+}
+
+div[id*="sidebar"] .thumbsup i.fa:hover {
+    margin: 0 15px;
+    opacity: 0.8;
+}
+
 
 /* Barre widget jqvmap */
 

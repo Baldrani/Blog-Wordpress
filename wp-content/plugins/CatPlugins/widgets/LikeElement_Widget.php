@@ -19,7 +19,7 @@ class LikeElement_Widget extends WP_Widget
     $currentPostStats = $wpdb->get_results("SELECT vote_value FROM {$wpdb->prefix}like_element WHERE id_post = \"".$currentPostId."\"");
     $vote = $currentPostStats[0]->vote_value;
 
-    echo '<i class="fa fa-thumbs-up" aria-hiden="true"></i>';
+    echo '<div class="thumbsup"><i class="fa fa-thumbs-up" aria-hiden="true"></i>';
 
 
     echo '<i class="fa fa-thumbs-down" aria-hiden="true"></i>';
@@ -34,7 +34,7 @@ class LikeElement_Widget extends WP_Widget
   			'upordown': 'up'
   		};
   		// since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
-  		jQuery.post('/wp-admin/admin-ajax.php', data, function(response) {
+  		jQuery.post('../wp-admin/admin-ajax.php', data, function(response) {
         document.getElementById('nbvotes').innerHTML = response;
   		});
   	});
@@ -55,7 +55,7 @@ class LikeElement_Widget extends WP_Widget
 
     echo "<div>
     votes : <span id='nbvotes'>".$vote."</span><br>
-    </div>";
+    </div></div>";
 
     echo $args['after_widget'];
   }
