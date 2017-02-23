@@ -8,9 +8,14 @@ Version: 0.0.1
 
 /* Fonts */
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Baloo');
 
 body{
   color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Baloo', sans-serif;
 }
 
 .header {
@@ -80,6 +85,20 @@ div[id*="sidebar"] li[id*="top5chats"] p:nth-child(4) i {
 
 div[id*="sidebar"] li[id*="recent-post"] ul {
     padding-left: 0;
+}
+
+div[id*="sidebar"] .thumbsup {
+    text-align: center;
+    cursor: pointer;
+}
+
+div[id*="sidebar"] .thumbsup i.fa {
+    margin: 0 15px;
+}
+
+div[id*="sidebar"] .thumbsup i.fa:hover {
+    margin: 0 15px;
+    opacity: 0.8;
 }
 
 
