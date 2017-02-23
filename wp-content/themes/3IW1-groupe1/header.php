@@ -2,7 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title><?php  wp_title(); echo ' | '; bloginfo('name'); ?></title>
+  <title><?php
+  if (!empty(wp_title())) {
+
+      echo wp_title();
+
+  } else {
+      echo bloginfo('name');
+  } ?></title>
   <?php wp_head(); ?>
 </head>
 <body>
@@ -13,5 +20,4 @@
   }else{
     echo "pas d'image d'en-tete";
   }
-  wp_nav_menu(array('theme_location' => 'main_menu') );
   ?>
