@@ -100,17 +100,24 @@ div[id*="sidebar"] li[id*="recent-post"] ul {
 
 div[id*="sidebar"] .thumbsup {
     text-align: center;
-    cursor: pointer;
+    margin-top: 15px;
 }
 
 div[id*="sidebar"] .thumbsup i.fa {
     margin: 0 15px;
+    font-size: 35px;
+    margin-bottom: 15px;
 }
 
 div[id*="sidebar"] .thumbsup i.fa:hover {
     margin: 0 15px;
     opacity: 0.8;
 }
+
+div[id*="sidebar"] [class*="fa-thumbs"]{
+  cursor: pointer;
+}
+
 
 
 /* Barre widget jqvmap */
