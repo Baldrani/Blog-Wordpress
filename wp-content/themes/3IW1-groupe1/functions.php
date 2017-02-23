@@ -17,6 +17,15 @@
     add_action('init', 'my_menus');
 
     /* Zone de widgets */
+    function header_widget() {
+        register_sidebar(array(
+            'name'          => 'Widget Header',
+            'id'            => 'header-widget',
+            'description'   => 'Un widget dans le header'
+        ));
+    }
+    add_action('widgets_init', 'header_widget');
+
     function my_sidebars()
     {
         register_sidebar(array(

@@ -32,7 +32,6 @@ else {
                             //$toto = get_the_date('Y-m-d', $recent["ID"]);
                                     the_post(); ?><a href="<?php echo the_permalink(); ?>" title="Aller à l'annonce"><figure><?php the_post_thumbnail(array(640,310)); ?><figcaption><?php the_title(); ?></figcaption></figure></a>
                                     <?php
-
                         }
                         $i++;
                     } ?>
