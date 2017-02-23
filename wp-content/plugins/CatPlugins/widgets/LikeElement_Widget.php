@@ -9,6 +9,7 @@ class LikeElement_Widget extends WP_Widget
   public function widget($args, $instance)
   {
     global $wp_query;
+    if(!$wp_query->is_home()){
     $currentPostId = $wp_query->post->ID;
 
     global $wpdb;
@@ -56,7 +57,7 @@ class LikeElement_Widget extends WP_Widget
     echo "<div>
     votes : <span id='nbvotes'>".$vote."</span><br>
     </div></div>";
-
+  }
     echo $args['after_widget'];
   }
 
