@@ -5,7 +5,7 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * 
+ *
  */
 
 /*
@@ -31,8 +31,8 @@ if ( post_password_required() ) {
 					printf(
 						/* translators: 1: number of comments, 2: post title */
 						_nx(
-							'%1$s thought on &ldquo;%2$s&rdquo;',
-							'%1$s thoughts on &ldquo;%2$s&rdquo;',
+							'%1$s commentaire sur &ldquo;%2$s&rdquo;',
+							'%1$s commentaires sur &ldquo;%2$s&rdquo;',
 							$comments_number,
 							'comments title',
 							'3IW1-groupe1'
