@@ -24,10 +24,24 @@ div[id*="header-widget"] {
     float: right;
 }
 
+div[id*="sidebar"] {
+    background: rgba(255, 176, 111, 0.5);
+    color: rgb(163, 96, 40);
+    font-size: 21px;
+    line-height: 1.3em;
+    border: 2px dashed rgba(163, 96, 40, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 0 4px rgba(255, 176, 111, 0.5), 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+}
+
 div[id*="header-widget"] li,
 div[id*="sidebar"] li {
     list-style-type: none;
     text-align: center;
+}
+
+div[id*="sidebar"] h2 {
+    color: #333;
 }
 
 div[id*="header-widget"] p a {
@@ -36,14 +50,20 @@ div[id*="header-widget"] p a {
     color: rgb(163, 96, 40);
 }
 
-div[id*="sidebar"] li[id*="top5chats"] p {
-    height: 50px;
-    line-height: 50px;
+div[id*="sidebar"] li[id*="top5chats"] {
+    margin-bottom: 40px;
+}
+
+div[id*="sidebar"] li[id*="top5chats"] p,
+div[id*="sidebar"] li[id*="recent-post"] li {
+    font-family: 'Pacifico', sans-serif;
+    height: 40px;
+    line-height: 40px;
     font-size: 20px;
 }
 
 div[id*="sidebar"] li[id*="top5chats"] p i {
-    color: #fff;
+    color: rgba(255, 176, 111, 0.5);
 }
 
 div[id*="sidebar"] li[id*="top5chats"] p:nth-child(2) i {
@@ -56,6 +76,10 @@ div[id*="sidebar"] li[id*="top5chats"] p:nth-child(3) i {
 
 div[id*="sidebar"] li[id*="top5chats"] p:nth-child(4) i {
     color: rgba(150, 40, 27, 1);
+}
+
+div[id*="sidebar"] li[id*="recent-post"] ul {
+    padding-left: 0;
 }
 
 
