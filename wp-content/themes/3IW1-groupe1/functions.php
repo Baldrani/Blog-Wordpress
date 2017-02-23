@@ -165,6 +165,16 @@
         }
     }
 
+    // J'utilise les hooks
+    add_action( 'wp_ajax_my_action', 'my_action' );
+
+    function my_action() {
+    	global $wpdb; // this is how you get access to the database
+    	$upordown = $_POST['upordown'];
+            echo $upordown;
+    	wp_die(); // this is required to terminate immediately and return a proper response
+    }
+
 
     /*En-tete */
     add_theme_support('custom-header');

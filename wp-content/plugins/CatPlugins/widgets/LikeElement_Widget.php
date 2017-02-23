@@ -24,13 +24,26 @@ class LikeElement_Widget extends WP_Widget
 
     echo '<i class="fa fa-thumbs-down" aria-hiden="true"></i>';
 
+    echo "<script>
+
+    $(\"[class*='fa-thumbs']\").on( 'click', function($) {
+
+  		var data = {
+  			'action': 'my_action',
+  			'upordown': $(this).attr('id')
+  		};
+
+  		// since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+  		jQuery.post('/wp-admin/admin-ajax.php', data, function(response) {
+  			alert('Got this from the server: ' + response);
+  		});
+  	});
+    </script>";
+
     echo "votes : ".$vote."<br>";
 
     echo $args['after_widget'];
   }
-
-  // add_action( 'likeAction', 'likeAction' );
-  // add_action( 'dislikeAction', 'dislikeAction' );
 
   public function likeAction($vote,$currentPostId){
     global $wpdb;
