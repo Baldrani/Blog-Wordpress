@@ -15,7 +15,8 @@ else {
 <div class="container">
     <div class="row">
         <!-- Sldier Douae -->
-        <div class="col-xs-12 col-sm-8">
+
+        <div class="col-xs-12 col-sm-8" id="jqvmap">
             <?php
                 if (have_posts()) {
                     $args = array( 'numberposts' => '4', 'post_status' => 'publish' );
@@ -44,12 +45,9 @@ else {
                     echo 'Pas d\'article';
                 }
             ?>
-        </div>
-
-        <div class="col-xs-12 col-sm-8" id="jqvmap">
             <?php if ( is_active_sidebar('jqvmap') ) dynamic_sidebar('jqvmap'); ?>
         </div>
-        <div class="col-xs-12 col-sm-4" id="sidebar-1">
+        <div class="col-xs-offset-2 col-xs-8 col-sm-offset-1 col-sm-3" id="sidebar-1">
         <?php dynamic_sidebar('sidebar-1'); ?>
         </div>
     </div>
