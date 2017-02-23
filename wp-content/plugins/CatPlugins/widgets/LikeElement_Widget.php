@@ -8,19 +8,10 @@ class LikeElement_Widget extends WP_Widget
 
   public function widget($args, $instance)
   {
-    echo $args['before_widget'];
-    echo $args['before_title'];
-    echo apply_filters('widget_title', $instance['title']);
-    echo $args['after_title'];
-
-
     global $wp_query;
     $currentPostId = $wp_query->post->ID;
 
     global $wpdb;
-
-    echo "<h1>".$currenPostStats."</h1>";
-
     $currentPostStats = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}like_element WHERE id_post = \"".$currentPostId."\"");
     if(empty($currentPostStats)){
       $wpdb->insert("{$wpdb->prefix}like_element", array("id_post" => $currentPostId, "vote_value" => 0));
@@ -28,29 +19,30 @@ class LikeElement_Widget extends WP_Widget
     $currentPostStats = $wpdb->get_results("SELECT vote_value FROM {$wpdb->prefix}like_element WHERE id_post = \"".$currentPostId."\"");
     $vote = $currentPostStats[0]->vote_value;
 
-    echo '<div class="thumbs" id="thumbs-up" onclick="'.$this->likeAction($vote,$currentPostId).'">';
-      echo '<i class="fa fa-thumbs-up" aria-hiden="true"></i>';
-    echo '</div>';
+    echo '<i class="fa fa-thumbs-up" aria-hiden="true"></i>';
 
 
-    echo '<div class="thumbs" id="thumbs-down" onclick="'.$this->dislikeAction($vote,$currentPostId).'">';
-      echo '<i class="fa fa-thumbs-down" aria-hiden="true"></i>';
-    echo '</div>';
+    echo '<i class="fa fa-thumbs-down" aria-hiden="true"></i>';
 
     echo "votes : ".$vote."<br>";
 
     echo $args['after_widget'];
   }
 
+  // add_action( 'likeAction', 'likeAction' );
+  // add_action( 'dislikeAction', 'dislikeAction' );
+
   public function likeAction($vote,$currentPostId){
     global $wpdb;
     $vote = $vote + 1;
     $wpdb->update("{$wpdb->prefix}like_element",array("vote_value" => $vote),array("id_post" => $currentPostId));
+    echo "<meta http-equiv=\"refresh\" content=\"0\">";
   }
 
   public function dislikeAction($vote,$currentPostId){
     global $wpdb;
     $vote = $vote - 1;
     $wpdb->update("{$wpdb->prefix}like_element",array("vote_value" => $vote),array("id_post" => $currentPostId));
+    echo "<meta http-equiv=\"refresh\" content=\"0\">";
   }
 }
