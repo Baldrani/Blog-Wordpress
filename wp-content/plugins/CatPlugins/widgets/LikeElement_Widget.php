@@ -26,21 +26,36 @@ class LikeElement_Widget extends WP_Widget
 
     echo "<script>
 
-    $(\"[class*='fa-thumbs']\").on( 'click', function($) {
-
+    $('.fa-thumbs-up').on('click', function($) {
   		var data = {
   			'action': 'my_action',
-  			'upordown': $(this).attr('id')
+        'vote': ".$vote.",
+        'id': ".$currentPostId.",
+  			'upordown': 'up'
   		};
-
   		// since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
   		jQuery.post('/wp-admin/admin-ajax.php', data, function(response) {
-  			alert('Got this from the server: ' + response);
+        document.getElementById('nbvotes').innerHTML = response;
   		});
   	});
+
+    $('.fa-thumbs-down').on('click', function($) {
+      var data = {
+        'action': 'my_action',
+        'vote': ".$vote.",
+        'id': ".$currentPostId.",
+        'upordown': 'down'
+      };
+      // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+      jQuery.post('/wp-admin/admin-ajax.php', data, function(response) {
+        document.getElementById('nbvotes').innerHTML = response;
+      });
+    });
     </script>";
 
-    echo "votes : ".$vote."<br>";
+    echo "<div>
+    votes : <span id='nbvotes'>".$vote."</span><br>
+    </div>";
 
     echo $args['after_widget'];
   }

@@ -169,10 +169,17 @@
     add_action( 'wp_ajax_my_action', 'my_action' );
 
     function my_action() {
-    	global $wpdb; // this is how you get access to the database
-    	$upordown = $_POST['upordown'];
-            echo $upordown;
-    	wp_die(); // this is required to terminate immediately and return a proper response
+    	global $wpdb;
+        $vote = $_POST['vote'];
+        if($_POST['upordown'] == 'up'){
+            $vote = $vote + 1;
+        }
+        if($_POST['upordown'] == 'down'){
+            $vote = $vote - 1;
+        }
+        $wpdb->update("{$wpdb->prefix}like_element",array("vote_value" => $vote),array("id_post" => $_POST['id']));
+        echo $vote;
+    	wp_die();
     }
 
 
