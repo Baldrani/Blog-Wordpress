@@ -165,9 +165,8 @@
         }
     }
 
-    // J'utilise les hooks
+    /* Vote Chat */
     add_action( 'wp_ajax_my_action', 'my_action' );
-
     function my_action() {
     	global $wpdb;
         $vote = $_POST['vote'];
@@ -182,6 +181,21 @@
     	wp_die();
     }
 
+    function alter_comments_defaults( $defaults ) {
+    	global $post;
+
+    		$defaults = array(
+    			'title_reply'          => '',
+    			'cancel_reply_link'    => __( 'cancel#a#comment', 'text-domain' ),
+    			'label_submit'         => __( 'Poster votre commentaire', 'text-domain' ),
+    			'comment_field' 		=> '<p class="comment-form-comment"><label for="comment">' .
+    			_x( 'Commenter ce chat', 'text-domain' ) .
+    			'</label><textarea id="comment" name="comment" cols="45" rows="4" aria-required="true"></textarea></p>',
+    		);
+
+    		return $defaults;
+    }
+    add_filter( 'comment_form_defaults', 'alter_comments_defaults' );
 
     /*En-tete */
     add_theme_support('custom-header');

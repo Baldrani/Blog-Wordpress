@@ -260,3 +260,12 @@ div[id*="sidebar"] li[id*="recent-post"] ul {
   0%, 20%, 45%, 70%, 95%                     { bottom: -55px;    }
   10%, 19%, 35%, 44%, 60%, 69%, 85%, 94%       { bottom: 5px;      }
 }
+
+/* Articles */
+#comment{
+  border-radius: 10px;
+  height: 5em;
+  width: 100%;
+  resize: none;
+  padding: 3px 6px;
+}
