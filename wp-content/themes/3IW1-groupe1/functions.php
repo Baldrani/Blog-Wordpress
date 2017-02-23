@@ -29,12 +29,22 @@
     function my_sidebars()
     {
         register_sidebar(array(
-            'name'          => 'Barre latérale',
+            'name'          => 'Sidebar posts',
             'id'            => 'sidebar-1',
             'description'   => 'Cela apparait sur toutes les pages.'
         ));
     }
     add_action('widgets_init', 'my_sidebars');
+
+    function my_sidebars2()
+    {
+        register_sidebar(array(
+            'name'          => 'Sidebar pages',
+            'id'            => 'sidebar-2',
+            'description'   => 'Sidebar pour la page de contact.'
+        ));
+    }
+    add_action('widgets_init', 'my_sidebars2');
 
     /* Jqvmap */
     function jqvmap()
