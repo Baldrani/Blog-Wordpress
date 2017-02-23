@@ -11,7 +11,11 @@ class Jqvmap_France_Widget extends WP_Widget
         /* ~~~~ Change le fichier json en fonction des chats dispos ~~~~*/
         $str = file_get_contents(plugin_dir_path(__FILE__).'jqvmap_france/jquery.vmap.france.js');
         $str = substr($str, 81, strlen($str));
-        $str = substr($str, 0, -4);
+        if(preg_match('/^Windows/',php_uname()) == 1) {
+            $str = substr($str, 0, -5);
+        } else {
+            $str = substr($str, 0, -4);
+        }
         $json = json_decode($str,true);
 
         global $wpdb;
