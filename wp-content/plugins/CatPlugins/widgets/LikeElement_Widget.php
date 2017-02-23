@@ -35,7 +35,7 @@ class LikeElement_Widget extends WP_Widget
   			'upordown': 'up'
   		};
   		// since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
-  		jQuery.post('../wp-admin/admin-ajax.php', data, function(response) {
+  		jQuery.post('/wp-admin/admin-ajax.php', data, function(response) {
         document.getElementById('nbvotes').innerHTML = response;
   		});
   	});
